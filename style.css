@@ -1,0 +1,12 @@
+.part{
+margin: 55px;
+width: 20%;
+}
+.labirint{
+  position: absolute;
+  width: 500%;
+  z-index: -100;
+}
+h1{
+  margin:55px;
+}
