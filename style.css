@@ -67,6 +67,9 @@ text-decoration: underline;
   padding: 0.5px;
   margin: 0;
 }
+.intro{
+  padding-left: 10px;
+}
 .none{
   display: none;
 }
@@ -75,4 +78,7 @@ text-decoration: underline;
 }
 .refeerence{
   text-decoration: underline;
+}
+.content-block{
+  padding: 5px;
 }
