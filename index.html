@@ -3,30 +3,120 @@
 <head>
   <title>inenarrable scenario</title>
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="paperjs-v0.11.5/dist/paper-full.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="paper-full.js"></script>
   <script type="text/paperscript" src="script.js" canvas="canvas"></script>
 </head>
 <body>
+
   <div class="labirint">
-  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395.63 395.88">
-  <title>labirint</title>
-  <g id="ON3jFs.tif">
-    <g>
-      <path d="M97.19,293.3h39.76c0-1.75,0-3.33,0-4.91,0-24.37.09-48.73-.09-73.1,0-4,1.13-5.1,5-5,10.46.25,20.93.08,31.39.08h5V192.14H118.42v82.68c-2.55-2.35-3.58-117-1.72-126.54H243V272.7h62.35v41.37h38.87V233.43H303.53V169.16h63.93v22.18h-22l-.08-1.37h19.76V171.48H305.69v59.63h41.18v83.06h18.19V212.8H324.29V190.36l1.61-.12c1,6.42-.05,13.06.64,20.06h40.94V399.45H283.05l-.05-1.27c6.49-1.44,13.17-.44,19.74-.62,6.87-.19,13.75,0,20.63,0H365V316.58H283.08l-.09-1.74h19.92V275.55H243.34V356H325.4l.2,1.55a20.75,20.75,0,0,1-3.7.67c-25.56,0-51.13-.08-76.69.12-4.69,0-4.43-2.45-4.43-5.62q0-98.21,0-196.43v-5.71H118.61v38.6c1.76.08,3.35.21,4.94.22,17.49,0,35,.1,52.47-.07,3.69,0,5,1,4.83,4.78-.29,5.94-.08,11.9-.08,18.36H139.43v81h24.31c4.33,0,8.68.16,13-.06,3.14-.17,4.14.88,4.1,4.06-.16,12.55-.06,25.11-.06,37.67q0,40.36,0,80.72c0,1.45-.16,2.91-.26,4.53H33.36V106.36H53.78V85.84H97.45v20.08H199V88H116.35V67.41H35.29V87.73h-20V438.36h184v-61.5c2.65,2.71,3.54,54.45,1.81,64H13V45H200.7v1.26H15.44V85.12H33c0-5.75.08-11.39,0-17,0-2.42.66-3.47,3.29-3.47,26.61.07,53.22,0,79.83.06a14.55,14.55,0,0,1,2.13.38V85.69H304.81V87.4H201.76v20.83H95.41V88.13H56.05v20.4H35.47V418.05H178.14V296.26H98v59.82h19.52l0,1.52H95.83V148.7h1.36Z" transform="translate(-13.02 -44.96)"/>
-      <path d="M220.58,440.84V398.29h1.36v40.07H406.15V129.54H366.07V86.22l1.33,0V106h18.7V67.33H347v61.73h-64.5V108.84H243.36v18.34h20.32v61.94h18.61V148.39H388.14v272H240.93V379.11c-6.18,0-11.81,0-17.44,0-2.29,0-3.62-.53-3.6-3.24.09-12.71,0-25.41.08-38.12a7.19,7.19,0,0,1,.78-2.2l1.15.09V376.8h82.81l.12,1.79c-4.78,1.17-9.8.34-14.68.49-5.23.16-10.46,0-15.69,0h-31.1v38.79h18.33V398.4l1.57-.08v19.59H386.1V150.66H284.48v82.11l-1.62,0V192.15H264.06v59.73h61.57V295l-1.4,0V254.31h-62.6c0-2.4,0-4.28,0-6.16q0-56.5,0-113c0-5.75,0-5.76-5.92-5.76H56.4V397.25H157.47V317.06H118.66v18.1h20.18v43.59c-1.41.12-2.83.35-4.25.35-18.39,0-36.77-.07-55.16.12-4,0-5-1.18-5-5.11q.17-110.54.08-221.09,0-2.11,0-4.22l1.26-.3a7.29,7.29,0,0,1,1.1,2.19,37.46,37.46,0,0,1,.06,4.48q0,108.08,0,216.16v5.14h59.66v-38.9h-20.5c0-7.41-.05-14.34.09-21.28,0-.64,1.31-1.78,2-1.79,13.71-.11,27.42-.08,41.38-.08v85.25H54.17V127.48H240.34V108.55H220.79v-2.1c17.05-.23,34.12-.07,51.18-.1s34.3,0,51.68,0V67.1H137.45l0-2.1c1.36-.11,2.72-.31,4.08-.31q90.14,0,180.28-.09c3.54,0,4.66.94,4.6,4.49-.19,11.66-.06,23.32-.08,35,0,1.31-.19,2.62-.33,4.45h-41V127h59.39c.09-1.55.26-3.11.26-4.67,0-17.64.1-35.28-.06-52.92,0-3.69,1-4.87,4.79-4.8,12.82.23,25.65.09,38.85.09v43.76H368V127h38.08V46.56H220.85V45.07h187.8V440.84Z" transform="translate(-13.02 -44.96)"/>
-      <path d="M179.22,252.17h19.69V233.63H160.26v39h40.47c1.86,6.38,1.2,82.87-1.26,85.8V275.12H158.05V231.29h40.79V170.83H137.44l-.15-1.45a13.72,13.72,0,0,1,2.88-.63c19.28,0,38.56,0,57.84-.08,2.69,0,3.65.79,3.64,3.57-.07,26.15,0,52.31-.12,78.46,0,1.17-1.39,3.32-2.19,3.35-6.41.22-12.84.06-19.25,0-.31,0-.62-.49-.93-.75Z" transform="translate(-13.02 -44.96)"/>
-      <path d="M347,378.48h-22.3l-.05-1.3h19.53V337.4H261.62c0-2.67,0-4.86,0-7,0-10.46.19-20.93-.09-31.39-.11-4.17.79-6,5.35-5.56s9.26.05,13.89.1a27.86,27.86,0,0,1,3.49.46l0,1.55H264.06v39.36c1.63.11,3.33.33,5,.33,24.21,0,48.43.13,72.64-.1,4.42,0,5.48,1.3,5.39,5.54C346.85,353.19,347,365.74,347,378.48Z" transform="translate(-13.02 -44.96)"/>
-      <path d="M221.85,168.92V315.79l-.78.31a7.11,7.11,0,0,1-1.08-2.19C218.46,298.28,219.7,171.67,221.85,168.92Z" transform="translate(-13.02 -44.96)"/>
-    </g>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842.89 1304.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>labitint1</title>
+  <g>
+    <polyline class="cls-1" points="334.95 129.52 422.27 129.52 422.27 0.5 0.5 0.5 0.5 1348.22 343.19 1348.22"/>
+    <polyline class="cls-1" points="507.94 0.5 842.39 0.5 842.39 1348.22 422.27 1348.22 422.27 1180.17 504.65 1180.17 504.65 1092.85 590.32 1092.85 590.32 1008.82 672.69 1008.82 672.69 677.67 758.37 677.67 758.37 506.33 674.34 506.33 674.34 590.35"/>
+    <polyline class="cls-1" points="171.84 1175.22 171.84 1050.5 86.17 1050.5 86.17 593.64 171.84 593.64 171.84 425.6 507.94 425.6 507.94 342.57 590.32 342.57 590.32 129.52"/>
+    <polyline class="cls-1" points="0.5 507.97 86.17 507.97 86.17 255.9"/>
+    <line class="cls-1" x1="171.84" y1="45.5" x2="171.84" y2="257.96"/>
+    <polyline class="cls-1" points="672.69 45.5 672.69 129.52 758.37 129.52 758.37 255.9"/>
+    <polyline class="cls-1" points="590.32 255.9 672.69 255.9 672.69 343.22 758.37 343.43"/>
+    <polyline class="cls-1" points="86.17 343.43 254.22 343.22 254.22 128.7"/>
+    <line class="cls-1" x1="86.17" y1="128.7" x2="171.84" y2="128.7"/>
+    <line class="cls-1" x1="86.17" y1="674.37" x2="338.24" y2="674.37"/>
+    <polyline class="cls-1" points="422.27 844.07 338.25 844.07 338.25 507.97 507.94 507.97 507.94 593.64 590.32 593.64"/>
+    <polyline class="cls-1" points="590.32 844.07 590.32 423.95 842.39 424.1"/>
+    <polyline class="cls-1" points="254.22 257.96 503 257.96 503 129.52"/>
+    <line class="cls-1" x1="338.24" y1="343.22" x2="338.24" y2="425.6"/>
+    <line class="cls-1" x1="254.22" y1="425.6" x2="254.22" y2="595.29"/>
+    <line class="cls-1" x1="422.27" y1="257.96" x2="422.27" y2="343.22"/>
+    <line class="cls-1" x1="86.17" y1="844.07" x2="180.08" y2="844.07"/>
+    <polyline class="cls-1" points="166.9 758.4 254.22 758.4 254.22 928.1"/>
+    <polyline class="cls-1" points="254.22 1099.44 254.22 1010.47 166.9 1010.47 166.9 928.1 763.31 928.1"/>
+    <polyline class="cls-1" points="842.39 844.07 763.31 844.07 763.31 758.4"/>
+    <polyline class="cls-1" points="422.27 676.02 511.24 676.02 511.24 928.1"/>
+    <line class="cls-1" x1="671.05" y1="1262.54" x2="842.39" y2="1262.54"/>
+    <polyline class="cls-1" points="166.9 1262.54 338.25 1262.54 338.25 1013.77"/>
+    <polyline class="cls-1" points="503 1262.54 590.32 1262.54 590.32 1175.22 756.72 1175.22 756.72 1013.77 842.39 1013.77"/>
+    <polyline class="cls-1" points="422.27 928.1 422.27 1013.77 511.24 1013.77"/>
+    <line class="cls-1" x1="86.17" y1="1262.54" x2="86.17" y2="1348.22"/>
+    <line class="cls-1" x1="86.17" y1="1175.22" x2="338.24" y2="1175.22"/>
+    <line class="cls-1" x1="338.24" y1="1091.2" x2="422.27" y2="1091.2"/>
+    <line class="cls-1" x1="672.69" y1="1175.22" x2="672.69" y2="1091.2"/>
+    <line class="cls-1" x1="422.27" y1="595.29" x2="422.27" y2="758.4"/>
   </g>
-</svg>
-</div>
-  <h1>inenarrable scenario</h1>
-  <div class="part">
-    <p>To continue the further investigation it is necessary to define what do we mean by future. Of course the most obvious answer would refer to the moment following after the present one, which leads us to the temporal perception of future. We can also think of it from the spacial point of view, as places we’ve not discovered or created yet. But for the current discussion the most relevant way to look at the future is mythological. Unlike the previous two, it describes the future not as a linear system, but as a cultural phenomena. “Future is not a natural dimension of the mind, rather it is a modality of perception and imagination…” (after the future) In this sense by future we mean progress, development, growth, but also an achievement of the ultimate goal at the end of the way.
-      Most of the modern political theories such as liberalism, social democracy, nationalism and communism are built on the same ground, defined by imperfection of present and brightness of upcoming.
+  <g id= "one" class = "content-block">
+  <foreignObject  x="296" y="144.45" width="125.45" height="12.5">
+      <p id="chapter">INTRODUCTION</p>
+  </foreignObject>
+  <rect x="435.78" y="165.24" width="54.15" height="77.66"/>
+
+  <foreignObject id = "abstract" x="296" y="165.24" width="125.45" height="77.66" >
+      <p class = "abstract">
+        Putting it in a <span class = "refeerence" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">very</span> abstract way the world can be described as a dynamic
+        system that involve probability algorithms containing of different parameters.
+        The value of parameter at which the changes occur is known as ”bifurcation value”
+        and the parameter that is varied is known as the ”bifurcation parameter”.
+        It seems that there is a common feeling that the world nowadays stands at the
+        “bifurcation point” where a small smooth change made to the parameter values of
+        a system causes a sudden ”qualitative" or topological change in its behaviour.
+        <br>However when one speaks of a future he uses language constructions such as “There will be…; We're going to…; You are about to… ”. It differs in various languages, but the vast majority of western systems share the same logic, where the 'future' tense refers to a time 'later than now', but it also expresses our attitude to the upcoming event. There are different approaches to the time theory, describing it as a spiral, spacial and even imaginary system. We might say that time was future at some moment of past and will be past at some moment of future. But based on our usage of language, which is an essential part of our consciousness, it is clear that we perceive time as a linear system.
     </p>
-  </div>
+</foreignObject>
+</g>
+  <polygon id = "arrow1" points="463.28 136.43 463.28 129.74 462.25 129.74 462.25 136.43 460.2 136.43 461.48 138.65 462.76 140.87 464.04 138.65 465.32 136.43 463.28 136.43"/>
+  <polygon id = "test" points="267.2 134.18 267.2 140.87 268.24 140.87 268.24 134.18 270.28 134.18 269 131.96 267.72 129.74 266.44 131.96 265.16 134.18 267.2 134.18"/>
+  <polygon points="547.36 136.43 547.36 129.74 546.33 129.74 546.33 136.43 544.28 136.43 545.56 138.65 546.85 140.87 548.13 138.65 549.41 136.43 547.36 136.43"/>
+  <polygon points="632.85 136.43 632.85 129.74 631.81 129.74 631.81 136.43 629.77 136.43 631.05 138.65 632.33 140.87 633.61 138.65 634.89 136.43 632.85 136.43"/>
+  <g class = "content-block">
+  <foreignObject id = "abstract" x="504" y="34.43" width="129.33" height="76.67">
+    <p class = "abstract">
+      Being a fourth year graduate student makes me thinking a lot about my future.
+      What am I going to do after the school? If I will find a job? Will I like it?
+      Am I going to be successful? But also which country I’m going to live in?
+      How my life will look in 10 or 20 years? And what about 100 years?
+      Am I going to be still alive then?
+      </p>
+      <p class = "abstract">
+      This might sound insane and over exaggerated, but such line of thoughts
+      brings me to the more global wonder about the future of humanity and highlights
+      the fact that my individual destiny is just one of many. It is a drop in the water
+      of human existence and highly dependent on the general stream. But how do
+      I know if it’s a great ocean or drying brook, if it’s a still water or a fast flood?
+      </p>
+    	<p class = "abstract">
+      It seems that it is not only me standing on the crossroad, but the whole world is
+      about to finally graduate and enter it’s adult responsible life. But how do we both,
+      me and the world, choose the direction, when there is so much uncertainty and anxiety around?
+      How should we make this brave step, when there are so many fears, which hold us back?
+    </p>
+  </foreignObject>
+  <foreignObject x="435.78" y="34.43" width="54.15" height="76.67">
+      <img class="picture" src = "img/NPkgrW9KbV8.jpg"/>
+  </foreignObject>
+  <foreignObject  x="462.76" y="10" width="125.45" height="14">
+    <p id="chapter">INENARRABLE SCENARIO</p>
+</foreignObject>
+</g>
+</svg>
+
+</div>
   <canvas id="canvas" resize hidpi="off"></canvas>
 </body>
 </html>

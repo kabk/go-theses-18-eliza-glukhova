@@ -1,12 +1,69 @@
-.part{
-margin: 55px;
-width: 20%;
+body, html{
+  width: 100%;
+  height: 100%;
+  margin:-40px 10px 10px 10px;
 }
+@font-face {
+    font-family: "SunOT-ExtraLight";
+    src: url(font/SunOT-Light.otf) format("opentype");
+}
+@font-face {
+    font-family: "BaseNineB";
+    src: url(font/62.Base/BaseNineB.otf) format("opentype");
+}
+@font-face {
+    font-family: "FagoCo-Black";
+    src: url(font/76.Fago/FagoCo-Black.otf) format("opentype");
+}
+@font-face {
+    font-family: "CaeciliaLTStd-Heavy";
+    src: url(font/81.Caecilia/CaeciliaLTStd-Heavy.otf) format("opentype");
+}
+@font-face {
+    font-family: "TriplexItalic-XBold";
+    src: url(font/88.Triplex/TriplexItalic-XBold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Jaures-Black";
+    src: url(font/Agence/Jaures-Black.otf) format("opentype");
+}
+
 .labirint{
   position: absolute;
-  width: 500%;
+  margin-top: 55px;
+  width: 290%;
   z-index: -100;
+
 }
-h1{
-  margin:55px;
+
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+.block{
+
+}
+#chapter{
+font-family: 'TriplexItalic-XBold';
+font-size: 7pt;
+margin: 0;
+text-decoration: underline;
+}
+.picture{
+  width: 100%;
+  height: auto;
+}
+.abstract{
+  font-family: 'SunOT-Light';
+  font-size: 3pt;
+  margin: 0;
+}
+.none{
+  display: none;
+}
+#abstract{
+  overflow: hidden;
+}
+.refeerence{
+  text-decoration: underline;
 }
