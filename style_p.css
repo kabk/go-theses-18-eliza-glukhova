@@ -1,0 +1,156 @@
+body, html{
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+    font-family: "Sun-SemiBold";
+    src: url(font/Sun-SemiBold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Sun-RegularItalic";
+    src: url(font/Sun-RegularItalic.otf) format("opentype");
+}
+@font-face {
+    font-family: "SunOT-ExtraBoldItalic";
+    src: url(font/SunOT-ExtraBoldItalic.otf) format("opentype");
+}
+@font-face {
+    font-family: "SunCd-Black";
+    src: url(font/SunCd-Black.otf) format("opentype");
+}
+@font-face {
+    font-family: "TriplexSans-Light";
+    src: url(font/88.Triplex/TriplexSans-Light.otf) format("opentype");
+}
+
+
+
+
+
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  @page {
+    size: A4;
+  }
+  @page {
+    margin-top: 1.3cm;
+    margin-right: 0;
+    margin-left: 0;
+
+  }
+  h1 {
+    margin-left: 3cm;
+    font-family:'SunCd-Black';
+    color: black;
+    font-size: 5.6em;
+    line-height: 1em;
+    page-break-before: always;
+    text-decoration: underline;
+  }
+  h2 {
+    text-decoration: underline;
+    font-family: 'Sun-SemiBold';
+    color: black;
+    font-size: 1em;
+    line-height: 1em;
+    text-decoration: underline;
+  }
+.new_page{
+  page-break-after: always;
+}
+  @page :first {
+  margin: -14px 0px 0px 0px;
+  }
+
+  .section, .abstract, .key{
+    font-family: 'Sun-SemiBold';
+    color: black;
+    font-size: 1.3em;
+    line-height: 1.2em;
+  }
+  .title{
+    margin-left: 1cm;
+    margin-top: 4cm;
+    margin-bottom: 6cm;
+    text-align: center;
+    font-family: 'SunCd-Black';
+    color: black;
+    font-size: 14em;
+    line-height: 0.8em;
+
+  }
+  .breack{
+    page-break-before: always;
+  }
+  .credits{
+    font-family: 'Sun-SemiBold';
+    color: black;
+    font-size: 20pt;
+    line-height: 24pt;
+  }
+
+  .page{
+    margin-left: 19cm;
+  }
+  .page1{
+    margin-left: 7.3cm;
+  }
+  .page2{
+    margin-left: 12cm;
+  }
+#quote{
+  margin-left: 3cm;
+  margin-right: 3cm;
+  font-family: 'SunCd-Black';
+  color: black;
+  font-size: 3em;
+  line-height: 1.1em;
+}
+  .p1, .abstract{
+    margin-left: 12cm;
+    margin-right: 5cm;
+  }
+  .p2{
+    margin-left: 5cm;
+    margin-right: 12cm;
+  }
+  .p3{
+    margin-left: 3cm;
+    margin-right: 16cm;
+  }
+  .p4{
+    margin-left: 18cm;
+    margin-right: 3cm;
+  }
+  .p5{
+    margin-left: 3cm;
+    margin-right: 8cm;
+  }
+  .p6{
+    margin-left: 8cm;
+    margin-right: 10cm;
+  }
+  .key{
+    margin-left: 3cm;
+    width: 10cm;
+    page-break-before: always;
+  }
+  .coment{
+    font-family: 'Sun-RegularItalic';
+    color: black;
+    font-size: 1em;
+    line-height: 1.2em;
+    padding: 0.5cm;
+    border:4px double black;
+  }
+  .direction{
+      font-family: 'Sun-RegularItalic';
+      color: black;
+      font-size: 1em;
+      line-height: 1em;
+
+  }
