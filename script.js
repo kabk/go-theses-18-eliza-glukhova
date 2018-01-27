@@ -1,129 +1,109 @@
-function inWindow(s){
-  var scrollTop = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  var currentEls = $(s);
-  var result = [];
-  currentEls.each(function(){
-    var el = $(this);
-    var offset = el.offset();
-    if(scrollTop <= offset.top && (el.height() + offset.top) < (scrollTop + windowHeight))
-      result.push(this);
+$(document).ready(function(){
+  $(document).scrollTo('.slide1', 800, {queue: true, axis:'yx'});
+	$(".button").insertAfter("head");
+
+  $(document).on("click", "#second", function(evt) {
+  	animateGoTo("slide2");
   });
-  return $(result);
-}
-
-
-
-$(document).ready(function() {
-  $('.refeerence').popover();
-
-  $(document).click(function(event){
-    if( $(event.target).hasClass("refeerence") || $(event.target).hasClass("popover-body")) return;
-    $('.refeerence').popover('hide');
+  $(document).on("click", "#third", function(evt) {
+  	animateGoTo("slide3");
   });
-  $(document).scrollTo({left:"73%", top:0});
-
-  $('#arrow1').click(function (){
-    $(document).scrollTo('#one', 1200, {queue: true, axis:'yx'});
+  $(document).on("click", "#fourth", function(evt) {
+  	animateGoTo("slide4");
+  });
+  $(document).on("click", "#fifth", function(evt) {
+  	animateGoTo("slide5");
+  });
+  $(document).on("click", "#sixth", function(evt) {
+  	animateGoTo("slide6");
+  });
+  $(document).on("click", "#seventh", function(evt) {
+  	animateGoTo("slide7");
+  });
+  $(document).on("click", "#ninth", function(evt) {
+  	animateGoTo("slide8");
+  });
+  $(document).on("click", "#eleventh", function(evt) {
+  	animateGoTo("slide9");
+  });
+  $(document).on("click", "#twelfth", function(evt) {
+  	animateGoTo("slide10");
+  });
+  $(document).on("click", "#tenth", function(evt) {
+  	animateGoTo("slide11");
   });
 
-  /*$(document).on("scroll", function() {
-    setTimeout(function(){
-    $(".content-block").addClass("none");
-      inWindow(".content-block").removeClass("none");
-    }, 300);
-  });*/
-});
-$('#arrow1').hover(function(){
-  $(this).attr("fill", "red");
-
-}, function(){
-$(this).attr("fill", "black");
-});
-
-var shiftX = 200;
-var shiftY = 100;
-var shapes = [
-	{
-		"segments": [[shiftX, shiftY], [shiftX+100, shiftY], [shiftX+100, shiftY+30], [shiftX+40, shiftY+30],
-	  [shiftX+40, shiftY+60],[shiftX+100, shiftY+60], [shiftX+100, shiftY+90],
-	  [shiftX+40, shiftY+90], [shiftX+40, shiftY+160], [shiftX,shiftY+160]],
-		"left":null,
-		"right":null,
-		"transformLeft":null,
-		"transformRight":null
+  function animateGoTo(slide){
+  	$("."+slide).zoomTo({
+  		targetsize:0.1,
+  		duration:600,
+  		animationendcallback: function(){
+  			$("."+slide).zoomTo({targetsize:0.9, duration:600});
+  		}
+  	});
   }
-];
+/*
+ function animateGoTo(slide){
 
-var path = new Path({
-  segments: shapes[0].segments,
-  fillColor: 'black'
+  	$("body").animate(
+  		{zoom:0.3},
+  		{
+  			duration: 3000,
+  			progress: function(e, progress){
+  				console.log(progress);
+  				var left = $(document).scrollLeft()*(1-progress/2);
+  				var top = $(document).scrollTop()*(1-progress/2);
+  				$(document).scrollTo({left:left, top:top}, 1);
+  			},
+  			complete: function(){
+  				position = {left:$("."+slide).offset().left*0.3, top:$("."+slide).offset().top*0.3};
+  				position = "."+slide;
+  				$(document).scrollTo(position, 2800,
+  				{
+  					axis:'yx',
+  					onAfter: function(){
+  						//$("body").animate({zoom:1}, 1000);
+  					},
+  					progress: function(e, progress){
+  						var zoom = 0;
+  						zoom = 0.3+0.7*progress;
+  						$("body").css({zoom:zoom});
+  					}
+  				  }
+  				);
+  			}
+  		}
+  	);
+  }
+$('#first').click(function (){
+  animateGoTo("slide1");
 });
-var transformBack = false;
-var duration = 2;
-var transformBackStart = null;
-for (var i=0; i<shapes[0].segments.length; i++){
-	if(shapes[0].segments[i][0] < shapes[0].left || shapes[0].left===null){
-		shapes[0].left = shapes[0].segments[i][0];
-	}
-	if(shapes[0].segments[i][0] > shapes[0].right){
-		shapes[0].right = shapes[0].segments[i][0];
-	}
-}
-//console.log( "hi", shapes[0].left, shapes[0].right);
+$('#second').click(function (){
+    animateGoTo("slide2");
+});
+  $('#third').click(function (){
+        $(document).scrollTo('.slide3', 1600, {queue: true, axis:'yx'});
 
-function onResize() {
+    });
+  $('#fifth').click(function (){
+      $(document).scrollTo('.slide5', 1600, {queue: true, axis:'yx'});
 
-}
+  });
+  $('#sixth').click(function (){
+      $(document).scrollTo('.slide6', 1600, {queue: true, axis:'yx'});
 
-function onMouseMove(e) {
+  });
+  $('#seventh').click(function (){
+      $(document).scrollTo('.slide7', 1600, {queue: true, axis:'yx'});
+      console.log("hi");
+  });
+  $('#fourth').click(function (){
+      $(document).scrollTo('.slide8', 1600, {queue: true, axis:'yx'});
+      console.log("hi");
+  });
+  $('#eightth').click(function (){
+      $(document).scrollTo('.slide1', 1600, {queue: true, axis:'yx'});
+      console.log("hi");
+  });*/
 
-  //path.smooth();
-  var mouseX = e.event.offsetX;
-  var basePointY = shiftY+160;
-  var basePointX = shiftX;
-  var direction = null;
-	shapes[0].transformRight = null;
-	shapes[0].transformLeft = null;
-	if (mouseX < basePointX-200 || mouseX > basePointX+200){
-		transformBack = true;
-
-	}else{
-    for (var i=0; i<shapes[0].segments.length; i++){
-      var pointX = shapes[0].segments[i][0];
-      var pointY = shapes[0].segments[i][1];
-
-      var cathMouseY = basePointY+500;
-      var cathMouseX = pointX - mouseX;
-      var cathCoef = cathMouseY/cathMouseX;
-
-      var cathY = basePointY - pointY;//160
-      var cathX = cathY/cathCoef;
-
-      path.segments[i].point.x = pointX - cathX;
-			if(path.segments[i].point.x>shapes[0].transformRight || shapes[0].transformRight===null){
-				shapes[0].transformRight = path.segments[i].point.x;
-			}
-			if(path.segments[i].point.x<shapes[0].transformLeft || shapes[0].transformLeft === null){
-				shapes[0].transformLeft = path.segments[i].point.x;
-			}
-    }
-	}
-	//console.log(shapes[0].transformLeft, shapes[0].transformRight);
-}
-
-function onFrame(event) {
-	if(transformBack){
-		if(transformBackStart === null){
-			transformBackStart = event.time;
-			shiftSize = shapes[0].transformRight - shapes[0].right;
-			if(shiftSize < shapes[0].left - shapes[0].transformLeft){
-				shiftSize = shapes[0].left - shapes[0].transformLeft;
-			}
-		}
-		k = 1-(event.time - transformBackStart)/duration;
-		for (var i=0; i<shapes[0].segments.length; i++){
-			path.segments[i].point.x = shapes[0].segments[i][0]+k*shiftSize;
-		}
-	}
-}
+});

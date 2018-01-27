@@ -1,84 +1,288 @@
 body, html{
-  width: 100%;
-  height: 100%;
-  margin:-40px 10px 10px 10px;
+
 }
 @font-face {
-    font-family: "SunOT-ExtraLight";
-    src: url(font/SunOT-Light.otf) format("opentype");
+    font-family: "Sun-SemiBold";
+    src: url(font/Sun-SemiBold.otf) format("opentype");
 }
 @font-face {
-    font-family: "BaseNineB";
-    src: url(font/62.Base/BaseNineB.otf) format("opentype");
+    font-family: "SunOT-ExtraBoldItalic";
+    src: url(font/SunOT-ExtraBoldItalic.otf) format("opentype");
 }
-@font-face {
-    font-family: "FagoCo-Black";
-    src: url(font/76.Fago/FagoCo-Black.otf) format("opentype");
-}
-@font-face {
-    font-family: "CaeciliaLTStd-Heavy";
-    src: url(font/81.Caecilia/CaeciliaLTStd-Heavy.otf) format("opentype");
-}
+
 @font-face {
     font-family: "TriplexItalic-XBold";
     src: url(font/88.Triplex/TriplexItalic-XBold.otf) format("opentype");
 }
-@font-face {
-    font-family: "TriplexSans-Light";
-    src: url(font/88.Triplex/TriplexSans-Light.otf) format("opentype");
-}
-@font-face {
-    font-family: "Jaures-Black";
-    src: url(font/Agence/Jaures-Black.otf) format("opentype");
+
+::-webkit-scrollbar {
+    display: none;
 }
 
-.labirint{
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.slide1{
   position: absolute;
-  margin-top: 55px;
-  width: 290%;
-  z-index: -100;
+  left: 8640px;
+  top:0;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide2{
+  position: absolute;
+  left: 5760px;
+  top: 1800px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide3{
+  position: absolute;
+  left: 0;
+  top: 3600px;
+  margin: 0;
+  wwidth: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide4{
+  position: absolute;
+  left: 4320px;
+  top: 3600px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide5{
+  position: absolute;
+  left: 12960px;
+  top: 3600px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide6{
+  position: absolute;
+  left: 10080px;
+  top: 5400px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide7{
+  position: absolute;
+  left: 1440px;
+  top: 7200px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide8{
+  position: absolute;
+  left: 5760px;
+  top: 7200px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide9{
+  position: absolute;
+  left: 12960px;
+  top: 7200px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide10{
+  position: absolute;
+  left: 17280px;
+  top: 7200px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide11{
+  position: absolute;
+  left: 7800px;
+  top: 9900px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.slide12{
+  position: absolute;
+  left: 2880px;
+  top: 10800px;
+  margin: 0;
+  width: 100vw;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+.animate-frame{
+  position: absolute;
+  top:-90px;
+  left: 0;
+}
+
+.scroll-container{
+  position: relative;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vw;
+}
+
+.credits{
+  margin-top: 30px;
+  margin-left:710px;
+  font-family: "Sun-SemiBold";
+  font-size: 16px;
+  line-height: 20px;
+  padding:10px;
+  border:4px double black;
+  position: absolute;
+}
+.coment{
+  font-family: "Sun-SemiBold";
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 50px;
 
 }
 
-canvas[resize] {
-    width: 100%;
-    height: 100%;
+.clearfix:after{
+  content: " ";
+  display:block;
+  clear: both;
+}
+.abstract, .chapter1, .chapter2, .chapter3,
+.chapter4, .chapter5, .chapter6, .chapter7,
+.chapter8, .chapter9, .chapter10{
+  float: right;
+  padding: 17px;
+  width: 39%;
+  height: 60%;
+  font-family: "Sun-SemiBold";
+  font-size: 24px;
+  line-height: 28px;
+  margin-right: 5%;
+  margin-top: 120px;
+margin-bottom: 20px;
 }
 
-#chapter{
-font-family: 'TriplexItalic-XBold';
-font-size: 1em;
-line-height: 18px;
-margin: 0;
-text-decoration: underline;
-}
-.picture{
-  width: 100%;
+.illustration{
+  float: right;
   height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 560px;
 }
-.abstract{
-  font-family: 'SunOT-ExtraLight';
-  font-size: 3.5pt;
-  margin: 0;
+.illustration_gif{
+  float: right;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 60px;
 }
-.abstract:hover{
-  font-family: 'TriplexItalic-XBold';
-  font-size: 5pt;
-  padding: 0.5px;
-  margin: 0;
+
+
+.title{
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "SunOT-ExtraBoldItalic";
+  font-size: 160px;
+  line-height: 120px;
 }
-.intro{
-  padding-left: 10px;
+.button{
+  position: fixed;
+  z-index:1000;
+  font-family: "Sun-SemiBold";
+  font-size: 16px;
+  line-height: 20px;
+margin-top: 200px;
+
 }
-.none{
-  display: none;
+#second, #third, #fourth, #fifth, #sixth, #seventh, #ninth, #tenth, #twelfth, #eleventh{
+  border:4px double black;
+  float:left;
+  padding:10px;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
 }
-#abstract{
-  overflow: hidden;
+#second, #third, #fourth, #fifth, #sixth, #seventh, #ninth, #tenth, #twelfth, #eleventh,:hover{
+  cursor: pointer;
 }
-.refeerence{
-  text-decoration: underline;
+
+#third{
+margin-top: 60px;
+margin-left: -70px;
+
 }
-.content-block{
-  padding: 5px;
+#fourth{
+  margin-top: 80px;
+  margin-left: 0px;
+}
+#fifth{
+  margin-top: 30px;
+  margin-left: 0px;
+}
+#sixth{
+  margin-top: 160px;
+  margin-left: -240px;
+}
+#seventh{
+  margin-top: 240px;
+  margin-left: -300px;
+}
+#ninth{
+  margin-top: 280px;
+  margin-left: -200px;
+}
+#eleventh{
+  margin-top: 340px;
+  margin-left: -130px;
+}
+#twelfth{
+  margin-top: 280px;
+  margin-left: -80px;
+}
+#tenth{
+  margin-top: 400px;
+  margin-left: -330px;
+}
+#eightth{
+  margin-top: 400px;
+  margin-left: -330px;
 }
